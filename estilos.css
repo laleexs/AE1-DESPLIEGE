@@ -1,3 +1,26 @@
 body {
     background-color:gray;
+    font-family: Arial, Helvetica, sans-serif;
+    display : flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+
+}
+
+h1 {
+    color:rgb(5, 49, 64)
+}
+
+p {
+    color: rgb(21, 20, 20)
+}
+
+form {
+  border: 2px solid black;   /* grosor, estilo y color del borde */
+  padding: 20px;             /* espacio interior */
+  border-radius: 10px;       /* esquinas redondeadas */
+  background-color: rgb(124, 121, 121);   /* color de fondo opcional */
 }
