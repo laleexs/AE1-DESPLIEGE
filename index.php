@@ -62,6 +62,7 @@ if ($_SESSION['letras_acertadas'] == $_SESSION['palabra']) {
         <label for="letra">Introduce una letra:</label>
         <input type="text" name="letra" id="letra" maxlength="1" required>
         <button type="submit">Adivinar</button>
+        <link rel="stylesheet" href="estilos.css">
     </form>
     <p>Letras usadas: <?php echo implode(', ', $_SESSION['letras_usadas']); ?></p>
 </body>
