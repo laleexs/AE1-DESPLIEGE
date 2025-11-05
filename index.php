@@ -4,7 +4,7 @@ session_start();
 //No es necesario usar :8000 con XAMPP, porque Apache ya trabaja por el puerto 80 ,url http://localhost/DESPLIEGE/AE1/index.php
 
 // Lista de palabras para el juego
-$palabras = ['elefante', 'jirafa', 'hipopotamo', 'rinoceronte', 'cocodrilo', 'camello', 'chimpance'];
+$palabras = ['elefante', 'jirafa', 'hipopotamo', 'rinoceronte', 'cocodrilo', 'camello', 'chimpance','pajaro','tigre','canguro'];
 
 // Inicializar el juego
 if (!isset($_SESSION['palabra'])) {
@@ -40,9 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['letra'])) {
 
 // Comprobar si se ha ganado o perdido
 if ($_SESSION['letras_acertadas'] == $_SESSION['palabra']) {
-    echo "¡Enhorabuena! Has ganado :) La palabra era: " . $_SESSION['palabra'] . "<br>";
-    session_destroy();
-    echo '<a href="">Jugar de nuevo</a>';
+    header("Location: ganar.php");
     exit();
 } elseif ($_SESSION['vidas'] <= 0) {
     echo "Lo siento, has perdido :( La palabra era: " . $_SESSION['palabra'] . "<br>";
